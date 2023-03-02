@@ -38,5 +38,20 @@ func (b *PhoneBuilder) SetScreenSize(screenSize float32) *PhoneBuilder {
 }
 
 func (b *PhoneBuilder) Build() *Phone {
+	if b.phone.model == "" {
+		b.phone.model = "Unknown"
+	}
+	if b.phone.name == "" {
+		b.phone.name = "Unknown"
+	}
+	if b.phone.os == "" {
+		b.phone.os = "Android"
+	}
+	if b.phone.ramInGB == 0 {
+		b.phone.ramInGB = 4
+	}
+	if b.phone.screenSize == 0 {
+		b.phone.screenSize = 4.5
+	}
 	return &b.phone
 }
