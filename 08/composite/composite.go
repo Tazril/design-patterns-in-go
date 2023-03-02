@@ -20,7 +20,7 @@ func (dpt TechDepartment) Count() int {
 	return dpt.headCount
 }
 
-// HeadDepartment even if it implements IDepartment, it is acting as template, has departments
+// HeadDepartment even if it implements IDepartment, it is acting as state, has departments
 type HeadDepartment struct {
 	departments []IDepartment
 }
